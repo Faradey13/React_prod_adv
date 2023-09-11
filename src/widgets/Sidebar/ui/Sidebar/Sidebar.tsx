@@ -57,7 +57,6 @@ export const Sidebar = ({className}: SidebarProps) => {
 
                 </AppLink>
 
-
                 <AppLink to={RoutePath.about}
                     theme={AppLinkTheme.PRIMARY}
                     className={cls.item}
