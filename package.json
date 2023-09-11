@@ -15,8 +15,8 @@
     "test": "react-scripts test --passWithNoTests -c ./config/storybook",
     "storybook": "storybook dev -p 6006 -c ./config/storybook",
     "test-storybook": "test-storybook",
-    "build-storybook": "storybook build -c  ./config/storybook",
-    "chromatic": "chromatic --storybook-build-dir ./config/storybook  --project-token=chpt_9ec8bdab5a22d5b"
+    "build-storybook": "storybook build -c ./config/storybook",
+    "chromatic": "chromatic --storybook-build-dir ./config/storybook  --project-token=chpt_efd0b1f2238f90d"
   },
   "keywords": [],
   "author": "",
