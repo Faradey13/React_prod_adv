@@ -32,15 +32,17 @@ jobs:
       - name: unit testing
         run: npm run unit
 
+      - name: storybook-build
+        run: npm run build-storybook
+
       - uses: actions/checkout@v3
         with:
                  fetch-depth: 0
-
       - name: Publish to Chromatic
         uses: chromaui/action@v1
         with:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          buildScriptName: build-storybook
+          storybookBuildDir: storybook-static
 
 
 
