@@ -11,12 +11,7 @@ const MainPage:FC = () => {
     const {t} = useTranslation()
     return (
         <div>
-
             {t('Главная страница')}
-            {/* eslint-disable-next-line react/jsx-no-undef */}
-            <BugButton/>
-
-
         </div>
     );
 };
