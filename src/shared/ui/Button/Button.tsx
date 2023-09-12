@@ -5,7 +5,9 @@ import 'app/styles/index.scss'
 
 export enum ButtonTheme {
     CLEAR = 'clear',
+    CLEAR_INVERTED = 'clearInverted',
     OUTLINED = 'outlined',
+    OUTLINED_INVERTED = 'outlinedInverted',
     BACKGROUND = 'background',
     BACKGROUND_INVERTED = 'backgroundInverted'
 }

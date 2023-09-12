@@ -31,7 +31,7 @@ module.exports = {
             "experimentalObjectRestSpread": true
         }
     },
-    plugins: ['react', 'i18next'],
+    plugins: ['react', 'i18next', "react-hooks"],
     parser: "@babel/eslint-parser",
     rules: {
         'react/jsx-indent': [2, 4],
@@ -54,7 +54,9 @@ module.exports = {
         "i18next/no-literal-string": ['error', {
             markup0nly: true
         }],
-        'no-undef': 'off'
+        'no-undef': 'off',
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "error"
     // "arrow-body-style": 0
     }
 };

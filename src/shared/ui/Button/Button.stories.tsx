@@ -33,6 +33,13 @@ export const Clear: Story = {
         theme: ButtonTheme.CLEAR
     },
 };
+
+export const ClearInverted: Story = {
+    args: {
+        children: 'Text',
+        theme: ButtonTheme.CLEAR_INVERTED
+    },
+};
 export const ClearDark: Story = {
     args: {
         children: 'Text',
@@ -64,6 +71,15 @@ export const OutlinedSizeXL: Story = {
         size: ButtonSize.XL
     },
 };
+
+export const OutlinedInverted: Story = {
+    args: {
+        children: 'Text',
+        theme: ButtonTheme.OUTLINED_INVERTED,
+        size: ButtonSize.M
+    },
+}
+
 export const OutlinedDark: Story = {
     args: {
         children: 'Text',

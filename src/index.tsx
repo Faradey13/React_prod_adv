@@ -1,5 +1,6 @@
 import ReactDOM from 'react-dom/client';
 import {BrowserRouter} from "react-router-dom";
+import 'app/styles/index.scss';
 import {ErrorBoundary} from "app/providers/ErrorBoundery";
 import App from "./app/App";
 import ThemeProvider from "./app/providers/ThemeProvider/ui/ThemeProvider";

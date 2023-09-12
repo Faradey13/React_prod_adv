@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { themeDecorator } from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
 import { Themes } from "app/providers/ThemeProvider";
 import { Sidebar } from "widgets/Sidebar";
-import {decorators} from "@storybook/react/dist/config";
+
 
 
 const meta = {
