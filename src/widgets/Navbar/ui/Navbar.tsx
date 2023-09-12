@@ -35,7 +35,7 @@ export const Navbar = ({className}: NavbarProps) => {
                         isOpen={isAuthModal}
                         onClose={onToggleModal}
                     >
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, similique?
+
                     </Modal>
                 </AppLink>
 
