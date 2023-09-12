@@ -16,7 +16,7 @@
     "storybook": "storybook dev -p 6006 -c ./config/storybook",
     "test-storybook": "test-storybook",
     "build-storybook": "storybook build -c ./config/storybook",
-    "chromatic": "chromatic --project-token CHROMATIC_PROJECT_TOKEN"
+    "chromatic": "npx chromatic --project-token CHROMATIC_PROJECT_TOKEN"
   },
   "keywords": [],
   "author": "",
