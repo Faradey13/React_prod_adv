@@ -6,7 +6,9 @@
 import path from "path";
 
 export default {
-
+    globals: {
+        __IS_DEV__: true,
+    },
     clearMocks: true,
     testEnvironment: 'jsdom',
     coveragePathIgnorePatterns: [
@@ -25,23 +27,22 @@ export default {
     //     "<rootDir>"
     // ],
 
-    modulePaths: [
-        "<rootDir>src"
-    ],
+    modulePaths: ['<rootDir>'],
 
     moduleDirectories: [
-        'node_modules',
+        'node_modules', 'src'
 
     ],
     testMatch: [
-        // Обнаружил разницу между МАК ОС и ВИНДОУС!!!
+
         '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',
     ],
     rootDir: '../../',
     setupFilesAfterEnv: ['<rootDir>config/jest/jest-setup.ts'],
     moduleNameMapper: {
         '\\.s?css$': 'identity-obj-proxy',
-        '\\.svg' : path.resolve(__dirname, 'jestEmptyComponent.tsx')
+        '\\.svg' : path.resolve(__dirname, 'jestEmptyComponent.tsx'),
+        'entities/(.*)': '<rootDir>src/entities/$1',
     },
 
 
@@ -106,7 +107,7 @@ export default {
     // globalTeardown: undefined,
 
     // A set of global variables that need to be available in all test environments
-    // globals: {},
+
 
     // The maximum amount of workers used to run your tests. Can be specified as % or a number. E.g. maxWorkers: 10% will use 10% of your CPU amount + 1 as the maximum worker number. maxWorkers: 2 will use a maximum of 2 workers.
     // maxWorkers: "50%",
