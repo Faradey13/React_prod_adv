@@ -4,6 +4,7 @@ import {AppLink, AppLinkTheme} from "shared/ui/AppLink/AppLink";
 import {useTranslation} from "react-i18next";
 import {Button, ButtonTheme} from "shared/ui/Button/Button";
 import {Modal} from "widgets/Modal";
+import {LoginModal} from "features/AuthByUsername";
 import cls from './Navbar.module.scss'
 
 
@@ -16,8 +17,11 @@ export const Navbar = ({className}: NavbarProps) => {
 
     const {t} = useTranslation()
 
-    const onToggleModal = useCallback(() => {
-        setIsAuthModal((prev) => !prev)
+    const onShowModal = useCallback(() => {
+        setIsAuthModal(true)
+    },[])
+    const onCloseModal = useCallback(() => {
+        setIsAuthModal(false)
     },[])
 
     return (
@@ -28,15 +32,13 @@ export const Navbar = ({className}: NavbarProps) => {
                     className={cls.main_link}
                     to={"/"}
                 >
-                    <Button onClick={onToggleModal} theme={ButtonTheme.CLEAR_INVERTED}>
+                    <Button onClick={onShowModal} theme={ButtonTheme.CLEAR_INVERTED}>
                         {t('Войти')}
                     </Button>
-                    <Modal
+                    <LoginModal
                         isOpen={isAuthModal}
-                        onClose={onToggleModal}
-                    >
-
-                    </Modal>
+                        onClose={onCloseModal}
+                    />
                 </AppLink>
 
             </div>

@@ -1,19 +1,19 @@
-
 import {useTranslation} from "react-i18next";
-import {BugButton} from "app/providers/ErrorBoundery";
-
-import {FC} from "react";
-import { Counter } from "entities/Counter";
+import { FC, useState } from "react";
 
 
 
 
 const MainPage:FC = () => {
+
+    const [value, setValue] = useState('')
+    const onChange = (value: string) => {
+        setValue(value)
+    }
     const {t} = useTranslation()
     return (
         <div>
-            {t('Главная страница')}
-            <Counter/>
+
         </div>
     );
 };
