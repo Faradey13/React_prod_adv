@@ -2,7 +2,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit'
 import axios from "axios";
 import {User, userActions} from "entities/User";
 import {StateSchema} from "app/providers/StoreProvider";
-import i18n from "shared/config/i18n/i18n";
+import i18next from 'i18next'
 import {LOCAL_STORAGE_THEME_KEY} from "app/providers/ThemeProvider/lib/ThemeContext";
 import {USER_LOCALSTORAGE_KEY} from "shared/const/localStorage";
 
@@ -26,7 +26,7 @@ export const loginByUsername = createAsyncThunk<User, loginByUsernameProps, {rej
         }
         catch (e) {
             console.log(e)
-            return thunkAPI.rejectWithValue(i18n.t('Логин или пароль неверные'))
+            return thunkAPI.rejectWithValue(i18next.t('Логин или пароль неверные'))
         }
     }
 )
