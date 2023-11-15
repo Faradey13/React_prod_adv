@@ -16,7 +16,7 @@ export const StoreProvider = (props: StoreProviderProps) => {
         children,
         initialState,
     } = props
-    const store = createReduxStore(initialState)
+    const store = createReduxStore(initialState as StateSchema)
     return (
         <Provider store={store}>
             {children}
