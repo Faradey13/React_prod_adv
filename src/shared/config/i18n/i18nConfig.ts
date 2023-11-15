@@ -6,7 +6,8 @@ i18n
     .init({
         lng: 'ru',
         fallbackLng: 'ru',
-
+        ns: ['translationsNS'],
+        defaultNS: 'translationsNS',
         debug: false,
 
         interpolation: {
