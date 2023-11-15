@@ -5,7 +5,7 @@ import { Themes } from "app/providers/ThemeProvider";
 import {Button, ButtonSize, ButtonTheme} from "./Button";
 
 const meta = {
-    title: "Example/Button",
+    title: "shared/Button",
     component: Button,
     tags: ["autodocs"],
     argTypes: {
@@ -126,6 +126,14 @@ export const SquareSizeXL: Story = {
         theme: ButtonTheme.BACKGROUND_INVERTED,
         square: true,
         size: ButtonSize.XL
+    }
+}
+
+export const Disabled: Story = {
+    args: {
+        children: '<',
+        theme: ButtonTheme.BACKGROUND_INVERTED,
+        disabled: true
     }
 };
 

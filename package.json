@@ -17,7 +17,7 @@
     "storybook": "storybook dev -p 6006 -c ./config/storybook",
     "test-storybook": "test-storybook",
     "build-storybook": "storybook build -c ./config/storybook",
-    "chromatic": "npx chromatic --project-token CHROMATIC_PROJECT_TOKEN"
+    "chromatic": "npx chromatic --project-token=chpt_9ec8bdab5a22d5b"
   },
   "keywords": [],
   "author": "",
@@ -92,7 +92,7 @@
   "dependencies": {
     "@babel/eslint-parser": "^7.22.5",
     "@reduxjs/toolkit": "^1.9.5",
-    "axios": "^1.4.0",
+    "axios": "^1.6.1",
     "i18next": "^v23.0.0",
     "i18next-browser-languagedetector": "^7.1.0",
     "i18next-http-backend": "^2.2.1",
