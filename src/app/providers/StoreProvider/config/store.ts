@@ -13,9 +13,12 @@ import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import {createReducerManager} from "app/providers/StoreProvider/config/reducerManeger";
 
 
-export function createReduxStore(initialState?:StateSchema){
+export function createReduxStore(
+    initialState?:StateSchema,
+    asyncReducers?: ReducersMapObject<StateSchema>){
 
     const rootReducer: ReducersMapObject<StateSchema> = {
+        ...asyncReducers,
         user: userReducer,
         counter: counterReducer
 

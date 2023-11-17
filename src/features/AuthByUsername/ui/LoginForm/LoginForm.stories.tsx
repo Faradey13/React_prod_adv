@@ -22,11 +22,23 @@ export const Primary: Story = {
 export const PrimaryDark: Story = {
 
 };
+export const PrimaryError: Story = {
+
+};
+export const PrimaryDarkError: Story = {
+
+};
 
 
 Primary.decorators = [StoreDecorator({loginForm: {
     username: 'sdfsdfsdf', password: 'sdfsdf' }
 })]
+PrimaryError.decorators = [StoreDecorator({loginForm: {
+    username: 'sdfsdfsdf', password: 'sdfsdf', error: 'error' }
+})]
 PrimaryDark.decorators = [themeDecorator(Themes.DARK),StoreDecorator({loginForm: {
     username: 'sdfsdfsdf', password: 'sdfsdf' }
+})]
+PrimaryDarkError.decorators = [themeDecorator(Themes.DARK),StoreDecorator({loginForm: {
+    username: 'sdfsdfsdf', password: 'sdfsdf', error: 'error' }
 })]
